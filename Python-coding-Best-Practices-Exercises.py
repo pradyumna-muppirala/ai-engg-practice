@@ -48,4 +48,3 @@ print("Files in the current directory:", files_in_directory)
 import sys
 print("Python version:", sys.version)
 print("Command line arguments:", sys.argv)
-# 
