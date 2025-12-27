@@ -134,4 +134,3 @@ print(rand1)
 
 randint1 = np.random.randint(0, 1000000, size=(3,3))
 print(randint1)
-
