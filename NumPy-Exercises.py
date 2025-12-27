@@ -120,3 +120,18 @@ print("Std =>", np.std(arr1))
 print("min => ", np.min(arr1))
 print("sum of the rowas =>", np.sum(arr1, axis=1))
 print("sum along columns => ", np.sum(arr1, axis=0))
+
+#Boolean indexing and filtering
+arr1 = np.array([1 , 2, 3, 4, 5, 6])
+print(arr1[arr1 % 2 ==0])
+
+arr1[arr1 % 3 == 0] = -1
+print(arr1)
+
+np.random.seed(20082074)
+rand1 = np.random.rand(3,3)
+print(rand1)
+
+randint1 = np.random.randint(0, 1000000, size=(3,3))
+print(randint1)
+
