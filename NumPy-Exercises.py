@@ -134,3 +134,52 @@ print(rand1)
 
 randint1 = np.random.randint(0, 1000000, size=(3,3))
 print(randint1)
+
+arr1 = np.arange(1, 10)
+arr2 = np.reshape(arr1, (3,3))
+print(arr2)
+arr3 = np.array([1,2 ,3 ]).reshape((1,3))
+print(arr3)
+result_add = arr2 + arr3
+print(result_add)
+
+result_mult = arr2 * arr3
+print(result_mult)
+
+result_mult *= 2
+print(result_mult)
+
+dataset = np.random.randint(1, 51, size=(5,5))
+print(dataset)
+dataset[dataset > 25] = 0
+print(dataset)
+
+print("sum => ", np.sum(dataset))
+print("mean => ", np.mean(dataset))
+print("std => ", np.std(dataset))
+print("min => ", np.min(dataset))
+print("max => ", np.max(dataset))
+
+dataset3D = np.random.randint(1,28, size=(3,3,3))
+print(dataset3D)
+print("sum => ", np.sum(dataset3D, axis=0))
+print("sum => ", np.sum(dataset3D, axis=1))
+print("sum => ", np.sum(dataset3D, axis=-1))
+
+randfloatarr = np.random.rand(3,3)
+print("Random float array => \n", randfloatarr)
+min = np.min(randfloatarr)
+max = np.max(randfloatarr)
+varianceVal = max - min
+randfloatarr2 = ((randfloatarr-min)/varianceVal)
+print("Normalized rand float array => \n", randfloatarr2)
+
+# Create a binary mask for values greater than a threshold
+threshold = 0.5
+binary_mask = randfloatarr2 > threshold
+print("Binary mask => \n", binary_mask)
+
+
+
+
+
