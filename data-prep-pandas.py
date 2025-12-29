@@ -11,7 +11,7 @@ print(df)
 df2 =  pd.read_csv("employee-data.csv")
 print(df2)
 
-df.dropna(axis=1)
+""" df.dropna(axis=1)
 print(df2)
 
 df2["email"] = df2["email"].fillna("a@b.com")
@@ -46,10 +46,10 @@ print(merged_df)
 merged_df = pd.merge(df, df2 , how="inner" , on="email")
 print(merged_df)
 
-""" df.set_index("id")
+df.set_index("id")
 df2.set_index("id")
 joined= df.join(df2, how="inner")
-pint(joined) """
+pint(joined)
 # auto-generated code below
 df.set_index("email", inplace=True)
 df2.set_index("email", inplace=True)
@@ -72,4 +72,44 @@ print(df)
 #one hot encoding example
 df2_encoded = pd.get_dummies(df2["department"], prefix="department")
 df2 = pd.concat([df2, df2_encoded], axis=1)
-print(df2)
+print(df2) """
+
+grouped = df2.groupby("department")
+print(grouped)
+
+for department, group in grouped:
+    print(f"\nDepartment: {department}")
+    print(group)
+    print(group["salary"].mean())
+
+agg_result = grouped["salary"].agg(["mean", "std", "min", "max"])
+print(agg_result)
+
+
+pivot_table1 = df2.pivot_table(values="salary", index="department", aggfunc="mean")
+print(pivot_table1)
+
+def range_func(x):
+    return x.max()-x.min()
+
+range_result = grouped["salary"].agg(range_func)
+print(range_result)
+
+agg2 = grouped.agg({"salary":["mean","max","min"]})
+print(agg2)
+
+#Additional exercises
+sales_df = pd.read_csv("sales_data.csv")
+grouped_sales = sales_df.groupby(["Category", "Country"])
+print(grouped_sales)
+
+for (category, country), group in grouped_sales:
+    print(f"\nCategory: {category}, Country: {country}")
+    print(group)
+print("Pivot ---->")
+pivot2  = sales_df.pivot_table(values="Sales_Amount", index=["Country","Category"], aggfunc="sum")
+print(pivot2)
+
+print("Ranges:--->")
+range_result = grouped_sales["Sales_Amount"].agg(range_func)
+print(range_result)
