@@ -9,7 +9,7 @@ Units_Sold = sales_df["Units_Sold"].to_list()
 #Utility function
 def transpose_column_list(row_list):
     # Transpose into row-type list
-    return (np.array(row_list).reshape(1,len(row_list)))
+    return (np.array(row_list).reshape(-1,1))
  
 #Task 1 : implement mathematcial formula for linear regression
 def predict (X, theta):
