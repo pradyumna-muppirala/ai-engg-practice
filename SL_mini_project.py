@@ -73,6 +73,23 @@ y_pred_lr = lr.predict(X_test)
 accuracy = accuracy_score(y_pred_lr, y_test)
 print("k = {k} => LR Accuracy score : ", accuracy)
 
+features = hd_df[['BP']]
+target= hd_df['Max HR']
+
+# print("Features \n", features.head())
+# print("Target \n", target.head())
+
+
+# print(hd_df.info())
+# print(hd_df.describe())
+
+#visualize relationships
+# sns.pairplot(hd_df, vars=['Age', 'BP', 'Cholesterol' , 'Max HR'])
+# plt.show()
+
+X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2)
+
+
 poly_features = PolynomialFeatures(degree=2,  include_bias=False)
 X_poly = poly_features.fit_transform(X_train)
 
@@ -101,24 +118,11 @@ print("Lasso MSE : ", mse)
 print("R squared: ", r2)
 print("Slope : ", model.coef_[0])
 print("Intercept : ", model.intercept_)
-plt.scatter(X_test, y_pred_lasso, color="blue", label="BP vs Max HR")
+plt.scatter(X_test, y_test, color="blue", label="BP vs Max HR")
 plt.scatter(X_train, y_train, color="green", label="Training Data")
-plt.plot(X_test, y_pred, color="red", label="Max HR")
+plt.plot(X_test, y_pred_lasso, color="red", label="Max HR")
 plt.xlabel("BP")
 plt.ylabel("Max HR")
 plt.legend()
 plt.title("Lasso model - Linear Regression - Blood Pressure vs Max HR")
-plt.show()
-
-#Integration graph
-
-plt.scatter(X_test, y_test, color="blue", label="BP vs Max HR")
-plt.scatter(X_train, y_train, color="green", label="Training Data")
-plt.plot(X_test, y_pred_linear, color="red", label="Max HR")
-plt.plot(X_test, y_pred_lasso, color="yellow", label="Max HR")
-plt.plot(X_test, y_pred_ridge, color="orange", label="Max HR")
-plt.xlabel("BP")
-plt.ylabel("Max HR")
-plt.legend()
-plt.title("Linear vs Lasso vs Ridge model - Linear Regression - Blood Pressure vs Max HR")
 plt.show()
