@@ -1,14 +1,14 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("employee-data.csv")
+df = pd.read_csv("data/employee-data.csv")
 print(df)
 
 df.dropna()
 print(df)
 
 
-df2 =  pd.read_csv("employee-data.csv")
+df2 =  pd.read_csv("data/employee-data.csv")
 print(df2)
 
 """ df.dropna(axis=1)
@@ -99,7 +99,7 @@ agg2 = grouped.agg({"salary":["mean","max","min"]})
 print(agg2)
 
 #Additional exercises
-sales_df = pd.read_csv("sales_data.csv")
+sales_df = pd.read_csv("data/sales_data.csv")
 grouped_sales = sales_df.groupby(["Category", "Country"])
 print(grouped_sales)
 

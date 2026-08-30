@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sbn
 
-titanic_df = pd.read_csv("titanic.csv")
+titanic_df = pd.read_csv("data/titanic.csv")
 print(titanic_df.info())
 print(titanic_df.describe())
 

@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from scipy.stats import chi2_contingency
 
 
-hd_df = pd.read_csv("Heart_Disease_Prediction.csv")
+hd_df = pd.read_csv("data/Heart_Disease_Prediction.csv")
 
 #Inspect the data
 print(hd_df.info())

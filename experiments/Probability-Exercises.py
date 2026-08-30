@@ -64,7 +64,7 @@ print("Probability of disease given positive tests =>", posterior)
 #Problem
 # Create a multinomial distribution graph based on multiclass data
 # Load the drug sales data
-df = pd.read_csv('sales_data.csv')
+df = pd.read_csv('data/sales_data.csv')
 
 # Aggregate Units_Sold and Sales_Amount by Category
 # This defines the outcomes of our multinomial trials

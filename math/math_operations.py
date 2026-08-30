@@ -46,7 +46,7 @@ def is_prime(n):
 def gcd(a, b):
     while b:
         a, b = b, a % b
-    return a
+    return abs(a)
 
 def lcm(a, b):
     return abs(a * b) // gcd(a, b)

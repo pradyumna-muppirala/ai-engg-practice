@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 
-hd_df = pd.read_csv("Heart_Disease_Prediction.csv")
+hd_df = pd.read_csv("data/Heart_Disease_Prediction.csv")
 # Linear regression
 features = hd_df[['Age', 'BP', 'Cholesterol' , 'Max HR']]
 hd_df['Heart Disease'] = hd_df['Heart Disease'].map({'Presence': 1, 'Absence': 0})

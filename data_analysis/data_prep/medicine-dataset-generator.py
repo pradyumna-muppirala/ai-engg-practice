@@ -47,5 +47,5 @@ print(f"\nDataset shape: {df.shape}")
 print(f"\nDataset summary:\n{df.describe()}")
 
 # Optionally save to CSV
-df.to_csv("sales_data.csv", index=False)
+df.to_csv("data/sales_data.csv", index=False)
 print("\nData saved to sales_data.csv")

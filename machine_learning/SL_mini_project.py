@@ -17,7 +17,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import PolynomialFeatures
 
-hd_df = pd.read_csv("Heart_Disease_Prediction.csv")
+hd_df = pd.read_csv("data/Heart_Disease_Prediction.csv")
 
 print(hd_df.info())
 print(hd_df.describe())

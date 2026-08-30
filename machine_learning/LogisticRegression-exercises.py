@@ -28,7 +28,7 @@ plt.grid()
 plt.show()
 
 
-hd_df = pd.read_csv("Heart_Disease_Prediction.csv")
+hd_df = pd.read_csv("data/Heart_Disease_Prediction.csv")
 # Logistic regression
 features = hd_df[["Age", "Max HR"]]
 hd_df['Heart Disease'] = hd_df['Heart Disease'].map({'Presence': 1, 'Absence': 0})

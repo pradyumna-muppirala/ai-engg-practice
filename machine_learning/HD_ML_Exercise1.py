@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import PolynomialFeatures
 
 
-hd_df = pd.read_csv("Heart_Disease_Prediction.csv")
+hd_df = pd.read_csv("data/Heart_Disease_Prediction.csv")
 # Linear regression
 features = hd_df[['BP']]
 hd_df['Heart Disease'] = hd_df['Heart Disease'].map({'Presence': 1, 'Absence': 0})

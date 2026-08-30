@@ -13,7 +13,7 @@ print(df4)
 
 # Additional exercises
 print("--- exercise 1 ---")
-df_employee = pd.read_csv("employee2.csv")
+df_employee = pd.read_csv("data/employee2.csv")
 print(df_employee.head())
 print(df_employee.describe())
 
@@ -38,4 +38,4 @@ print(df_friends)
 df4 = pd.read_excel("employee-data.xlsx")
 df5 = df4[df4["salary"] > 70000]
 print(df5)
-df5.to_csv("HNI_employees.csv")
+df5.to_csv("data/HNI_employees.csv")

@@ -27,7 +27,7 @@ plt.legend()
 plt.show()
 # Hands-on exercises
 
-sales_df = pd.read_csv("sales_data.csv")
+sales_df = pd.read_csv("data/sales_data.csv")
 Sales_Amounts = sales_df["Sales_Amount"].to_list()
 Units_Sold = sales_df["Units_Sold"].to_list()
 

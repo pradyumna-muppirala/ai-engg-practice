@@ -10,13 +10,13 @@ data = { "firstfriendsgroup" : {"FirstCouple" : {"Name": ["Alice", "Bob"], "Age"
 df = pd.DataFrame(data)
 print(df)
 print("---- Reading CSV file -----")
-df1 = pd.read_csv("employee-data.csv")
+df1 = pd.read_csv("data/employee-data.csv")
 print(df1)
 print("----- Reading Excel file -----")
 df2 = pd.read_excel("employee-data.xlsx")
 print(df2)
 
-df2.to_csv("employee2.csv")
+df2.to_csv("data/employee2.csv")
 
 #Viewing data
 print(df1.head())
