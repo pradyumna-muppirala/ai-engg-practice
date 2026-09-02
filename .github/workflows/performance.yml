@@ -1,0 +1,25 @@
+name: Performance Engineering Pipeline
+
+on:
+  workflow_dispatch:
+  # Triggered after security gate passes
+  workflow_run:
+    workflows: ["Security Review Pipeline"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    name: Performance Engineering
+    steps:
+      - name: Performance engineering stub
+        run: |
+          echo "Performance engineering pipeline stub - to be implemented"
+          echo "Model: nvidia/nemotron-3-super-120b-a12b:free"
+          echo "Activities:"
+          echo "  - Generate k6 scripts"
+          echo "  - Generate JMeter plans"
+          echo "  - Execute load tests"
+          echo "  - Execute stress tests"
+          echo "  - Analyze bottlenecks"

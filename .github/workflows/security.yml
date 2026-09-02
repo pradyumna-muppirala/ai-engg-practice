@@ -1,0 +1,37 @@
+name: Security Review Pipeline
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  security-review:
+    runs-on: ubuntu-latest
+    name: Security Review
+    steps:
+      - name: Security review stub
+        run: |
+          echo "Security review pipeline stub - to be implemented"
+          echo "Model: google/gemma-4-31b-it:free"
+          echo "Activities:"
+          echo "  - Secure code review"
+          echo "  - OWASP verification"
+          echo "  - Secret scanning"
+          echo "  - Dependency review"
+          echo "  - Generate security report"
+
+  adversarial-security:
+    runs-on: ubuntu-latest
+    name: Adversarial Security Testing
+    steps:
+      - name: Adversarial security stub
+        run: |
+          echo "Adversarial security pipeline stub - to be implemented"
+          echo "Model: nvidia/nemotron-3-super-120b-a12b:free"
+          echo "Activities:"
+          echo "  - Threat modeling"
+          echo "  - Abuse case generation"
+          echo "  - Attack simulation"
+          echo "  - Fuzz testing"
+          echo "  - Vulnerability assessment"

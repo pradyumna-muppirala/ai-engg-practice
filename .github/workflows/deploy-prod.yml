@@ -1,0 +1,23 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: production
+    name: Deploy PROD
+    steps:
+      - name: Deploy PROD stub
+        run: |
+          echo "Deploy PROD pipeline stub - to be implemented"
+          echo "Stage: Production"
+          echo "Activities:"
+          echo "  - Build and package"
+          echo "  - Containerize application"
+          echo "  - Run E2E tests"
+          echo "  - Deploy to Production"
+          echo "  - Run post-deployment validation"

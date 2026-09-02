@@ -1,0 +1,24 @@
+name: Observability Pipeline
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Infrastructure Validation Pipeline"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  observability:
+    runs-on: ubuntu-latest
+    name: Observability Configuration
+    steps:
+      - name: Observability stub
+        run: |
+          echo "Observability pipeline stub - to be implemented"
+          echo "Model: thinkingmachines/inkling:free"
+          echo "Activities:"
+          echo "  - Generate dashboards"
+          echo "  - Generate alerts"
+          echo "  - Configure OpenObserve"
+          echo "  - Configure telemetry pipelines"
+          echo "  - Validate monitoring coverage"

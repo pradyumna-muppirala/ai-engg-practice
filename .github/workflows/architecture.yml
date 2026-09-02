@@ -1,0 +1,23 @@
+name: Architecture Pipeline
+
+on:
+  push:
+    paths:
+      - 'docs/brd/**'
+  workflow_dispatch:
+
+jobs:
+  architecture:
+    runs-on: ubuntu-latest
+    name: Architecture Design
+    steps:
+      - name: Architecture stub
+        run: |
+          echo "Architecture pipeline stub - to be implemented"
+          echo "Model: nvidia/nemotron-3-super-120b-a12b:free"
+          echo "Activities:"
+          echo "  - Generate HLD"
+          echo "  - Generate LLD"
+          echo "  - Generate component diagrams"
+          echo "  - Generate API contracts"
+          echo "  - Publish to docs/hld/, docs/lld/, docs/api/"

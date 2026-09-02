@@ -1,0 +1,24 @@
+name: Infrastructure Validation Pipeline
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Performance Engineering Pipeline"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  infrastructure:
+    runs-on: ubuntu-latest
+    name: Infrastructure Validation
+    steps:
+      - name: Infrastructure validation stub
+        run: |
+          echo "Infrastructure validation pipeline stub - to be implemented"
+          echo "Model: z-ai/glm-5.2:free"
+          echo "Activities:"
+          echo "  - Terraform validation"
+          echo "  - Kubernetes validation"
+          echo "  - Helm validation"
+          echo "  - Deployment verification"
+          echo "  - Environment compliance checking"

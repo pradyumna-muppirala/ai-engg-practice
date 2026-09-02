@@ -1,0 +1,23 @@
+name: Deploy to UAT
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-uat:
+    runs-on: ubuntu-latest
+    environment: uat
+    name: Deploy UAT
+    steps:
+      - name: Deploy UAT stub
+        run: |
+          echo "Deploy UAT pipeline stub - to be implemented"
+          echo "Stage: UAT"
+          echo "Activities:"
+          echo "  - Build application"
+          echo "  - Run integration tests"
+          echo "  - Run API tests"
+          echo "  - Deploy to UAT environment"
+          echo "  - Run regression tests"

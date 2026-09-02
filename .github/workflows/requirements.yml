@@ -1,0 +1,23 @@
+name: Requirements Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      business_idea:
+        description: 'Business idea or product description'
+        required: true
+        type: string
+
+jobs:
+  requirements:
+    runs-on: ubuntu-latest
+    name: Requirements Engineering
+    steps:
+      - name: Requirements stub
+        run: |
+          echo "Requirements pipeline stub - to be implemented"
+          echo "Model: google/gemma-4-31b-it:free"
+          echo "Activities:"
+          echo "  - Generate BRD"
+          echo "  - Commit to docs/brd/BRD.md"
+          echo "  - Create pull request"
