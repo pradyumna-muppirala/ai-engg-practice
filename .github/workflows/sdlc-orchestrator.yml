@@ -129,7 +129,7 @@ jobs:
 
       - name: Requirements Engineering
         id: requirements
-        uses: ${{ github.repository }}@.github/workflows/requirements.yml
+        uses: ${{ github.repository }}@/.github/workflows/requirements.yml
         with:
           business_idea: ${{ github.event.inputs.business_idea }}
 
@@ -229,7 +229,7 @@ jobs:
 
       - name: Architecture Design
         id: architecture
-        uses: ${{ github.repository }}@.github/workflows/architecture.yml
+        uses: ${{ github.repository }}@/.github/workflows/architecture.yml
 
       - name: Quality Gate G2 - Architecture Approved
         id: architecture-gate
@@ -316,7 +316,7 @@ jobs:
 
       - name: Code Generation
         id: coding
-        uses: ${{ github.repository }}@.github/workflows/coding.yml
+        uses: ${{ github.repository }}@/.github/workflows/coding.yml
         with:
           issue_number: '1'  # Would be dynamically determined from agile planning
 
@@ -444,7 +444,7 @@ jobs:
 
       - name: Security Review
         id: security-review
-        uses: ${{ github.repository }}@.github/workflows/security.yml
+        uses: ${{ github.repository }}@/.github/workflows/security.yml
 
       - name: Quality Gate G5 - Security Review Passed
         id: security-gate
@@ -537,7 +537,7 @@ jobs:
 
       - name: Performance Engineering
         id: performance
-        uses: ${{ github.repository }}@.github/workflows/performance.yml
+        uses: ${{ github.repository }}@/.github/workflows/performance.yml
 
       - name: Quality Gate G7 - Performance Threshold Met
         id: performance-gate
@@ -609,7 +609,7 @@ jobs:
 
       - name: Observability Configuration
         id: observability
-        uses: ${{ github.repository }}@.github/workflows/observability.yml
+        uses: ${{ github.repository }}@/.github/workflows/observability.yml
 
       - name: Quality Gate G9 - Observability Configured
         id: observability-gate
@@ -642,7 +642,7 @@ jobs:
 
       - name: Deploy to Development
         id: deploy-dev
-        uses: ${{ github.repository }}@.github/workflows/deploy-dev.yml
+        uses: ${{ github.repository }}@/.github/workflows/deploy-dev.yml
 
       - name: Quality Gate G10a - DEV Deployment
         id: deploy-dev-gate
@@ -700,7 +700,7 @@ jobs:
 
       - name: Deploy to Production
         id: deploy-prod
-        uses: ${{ github.repository }}@.github/workflows/deploy-prod.yml
+        uses: ${{ github.repository }}@/.github/workflows/deploy-prod.yml
 
       - name: Quality Gate G10c - Production Deployment
         id: deploy-prod-gate
