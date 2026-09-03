@@ -1,9 +1,7 @@
 name: Test Automation Pipeline
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   testing:

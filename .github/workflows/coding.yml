@@ -1,7 +1,7 @@
 name: Development Pipeline
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       issue_number:
         description: 'GitHub Issue Number'

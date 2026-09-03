@@ -1,7 +1,6 @@
 name: Requirements Pipeline
 
 on:
-  workflow_dispatch:
   workflow_call:
     inputs:
       business_idea:
@@ -14,11 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Requirements Engineering
     steps:
-      - name: Requirements stub
+      - name: Requirements Engineering
         run: |
-          echo "Requirements pipeline stub - to be implemented"
+          echo "========================================"
+          echo "Requirements Engineering"
+          echo "========================================"
+          echo "Business Idea: ${{ inputs.business_idea }}"
           echo "Model: google/gemma-4-31b-it:free"
+          echo ""
           echo "Activities:"
           echo "  - Generate BRD"
           echo "  - Commit to docs/brd/BRD.md"
           echo "  - Create pull request"
+          echo ""

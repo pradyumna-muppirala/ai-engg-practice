@@ -1,7 +1,7 @@
 name: Infrastructure Validation Pipeline
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   infrastructure:

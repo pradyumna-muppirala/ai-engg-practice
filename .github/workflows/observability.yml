@@ -1,7 +1,7 @@
 name: Observability Pipeline
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   observability:

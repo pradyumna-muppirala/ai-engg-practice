@@ -1,10 +1,7 @@
 name: Architecture Pipeline
 
 on:
-  push:
-    paths:
-      - 'docs/brd/**'
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   architecture:
