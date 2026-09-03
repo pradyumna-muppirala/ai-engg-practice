@@ -55,8 +55,9 @@ on:
         options:
           - all
           - dev-only
-          - dev-uat
-          - dev-uat-prod
+          - dev-intg-only
+          - dev-intg-uat-only
+          - dev-intg-uat-prod
 
 env:
   ORCHESTRATOR_RUN: 'true'
